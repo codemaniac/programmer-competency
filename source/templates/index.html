@@ -37,6 +37,13 @@
             { 
               var tmp = catagory.concat(i);
               $("td#"+tmp).css('background-color', '#ddd');
+              if (tmp != c) {
+                $("td#"+tmp).hover(function() {
+                  $(this).css('background-color','#ffd');
+                }, function() {
+                  $(this).css('background-color','#ddd');
+                });
+              }
             }
             $(this).css('background-color', '#ff9');
             choices[catagory] = c;
